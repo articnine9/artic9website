@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env files
+.env*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# brochure source material and extraction working files (not part of the site)
+Artic9 Brochure-2025.pdf
+brochure_pages/
+extracted_assets/
+brochure_extracted_text.txt
+extract_ocr.ps1
+
+# backup of the previous component set
+_old_components/
