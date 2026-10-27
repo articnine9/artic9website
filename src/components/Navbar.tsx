@@ -1,21 +1,25 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ArrowRight, Mail } from "lucide-react";
 import Artic9Logo from "./Artic9Logo";
 import { ARTIC9_INFO } from "@/data/artic9Data";
 
 const NAV_LINKS = [
-  { label: "Works", href: "#works" },
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Clients", href: "#clients" },
-  { label: "Contact", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Works", href: "/#works" },
+  { label: "Contact", href: "/contact" }
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) => (href.includes("#") ? false : href === pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -28,21 +32,24 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
+  // close the drawer whenever the route changes
+  useEffect(() => setOpen(false), [pathname]);
+
   const phone = ARTIC9_INFO.phones[0];
 
   return (
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="container header-inner">
-          <a href="#top" aria-label="Artic9 home">
+          <Link href="/" aria-label="Artic9 home">
             <Artic9Logo size="md" />
-          </a>
+          </Link>
 
           <nav className="nav" aria-label="Primary">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href}>
+              <Link key={l.href} href={l.href} className={isActive(l.href) ? "active" : ""}>
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -53,12 +60,12 @@ export default function Navbar() {
               </span>
               {phone.display}
             </a>
-            <a className="btn btn-yellow header-cta" href="#contact">
+            <Link className="btn btn-yellow header-cta" href="/contact">
               Get in Touch
               <span className="chip">
                 <ArrowRight size={18} />
               </span>
-            </a>
+            </Link>
             <button className="menu-btn" aria-label="Open menu" onClick={() => setOpen(true)}>
               <Menu size={22} />
             </button>
@@ -77,9 +84,9 @@ export default function Navbar() {
 
         <nav className="drawer-nav">
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <Link key={l.href} href={l.href} className={isActive(l.href) ? "active" : ""} onClick={() => setOpen(false)}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

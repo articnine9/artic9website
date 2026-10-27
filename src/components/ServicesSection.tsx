@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight, ArrowUpRight, Heart, AtSign, Search, Calendar, Bell, ShoppingBag, MapPin, Star, TrendingUp } from "lucide-react";
 import Reveal from "./Reveal";
 
-function PhoneMock() {
+export function PhoneMock() {
   return (
     <div className="bento-phone" aria-hidden>
       <div className="bento-phone-notch" />
@@ -35,7 +35,7 @@ function PhoneMock() {
   );
 }
 
-function SearchMock() {
+export function SearchMock() {
   return (
     <div className="bento-search" aria-hidden>
       <div className="bs-rank">
@@ -51,10 +51,11 @@ function SearchMock() {
   );
 }
 
-export default function ServicesSection() {
+export default function ServicesSection({ compact = false }: { compact?: boolean }) {
   return (
     <section className="section" id="services">
       <div className="container">
+        {!compact && (
         <Reveal className="section-head center">
           <div className="eyebrow">Our Digital Marketing Services</div>
           <h2 className="section-title">
@@ -65,10 +66,11 @@ export default function ServicesSection() {
             digital marketing solutions.
           </p>
         </Reveal>
+        )}
 
         <div className="bento">
           {/* Tall brand-colour card */}
-          <a href="#contact" className="bento-card b-mobile tone-yellow">
+          <a href="/services#mobile-apps" className="bento-card b-mobile tone-yellow">
             <div className="bento-copy">
               <h3>
                 Mobile Apps
@@ -82,7 +84,7 @@ export default function ServicesSection() {
           </a>
 
           {/* Wide light card */}
-          <a href="#contact" className="bento-card b-video">
+          <a href="/services#photo-videography" className="bento-card b-video">
             <div className="bento-copy">
               <h3>
                 Photo &amp;
@@ -98,7 +100,7 @@ export default function ServicesSection() {
             <span className="bento-go"><ArrowUpRight size={20} /></span>
           </a>
 
-          <a href="#contact" className="bento-card b-web">
+          <a href="/services#web-development" className="bento-card b-web">
             <div className="bento-copy">
               <h3>
                 Website
@@ -114,7 +116,7 @@ export default function ServicesSection() {
             <span className="bento-go"><ArrowUpRight size={20} /></span>
           </a>
 
-          <a href="#contact" className="bento-card b-social">
+          <a href="/services#social-media" className="bento-card b-social">
             <div className="bento-copy">
               <h3>
                 Social Media
@@ -134,7 +136,7 @@ export default function ServicesSection() {
           </a>
 
           {/* Wide dark card */}
-          <a href="#contact" className="bento-card b-brand tone-dark">
+          <a href="/services#branding" className="bento-card b-brand tone-dark">
             <div className="bento-copy">
               <h3>
                 Branding &amp;
@@ -150,7 +152,7 @@ export default function ServicesSection() {
             <span className="bento-go"><ArrowUpRight size={20} /></span>
           </a>
 
-          <a href="#contact" className="bento-card b-seo">
+          <a href="/services#seo" className="bento-card b-seo">
             <div className="bento-copy">
               <h3>
                 Search Engine
@@ -164,14 +166,16 @@ export default function ServicesSection() {
           </a>
         </div>
 
+        {!compact && (
         <div className="center-cta">
-          <a className="btn btn-dark" href="#contact">
+          <a className="btn btn-dark" href="/services">
             View More
             <span className="chip">
               <ArrowRight size={18} />
             </span>
           </a>
         </div>
+        )}
       </div>
     </section>
   );

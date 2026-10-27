@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./pages.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Artic9 Creative Agency | Branding, Bespoke Web, Mobile Apps & ROI-Driven Marketing",
+  title: {
+    default: "Artic9 Creative Agency | Branding, Bespoke Web, Mobile Apps & ROI-Driven Marketing",
+    template: "%s | Artic9 Creative Agency"
+  },
   description: "Artic Nine Creative Agency was founded in 2019 in Nagercoil & Chennai. We help brands grow with creative power, high-impact tech, and results-driven marketing. Over 1500+ launched projects and 250+ clients.",
   keywords: [
     "Artic9",
@@ -39,7 +45,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

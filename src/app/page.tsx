@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import StatsCounter from "@/components/StatsCounter";
@@ -10,12 +9,10 @@ import ClientsMarquee from "@/components/ClientsMarquee";
 import TechStackBar from "@/components/TechStackBar";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import KnowledgeAccordion from "@/components/KnowledgeAccordion";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
+    <>
       <Hero />
       <ServicesSection />
       <StatsCounter />
@@ -27,7 +24,6 @@ export default function Home() {
       <TechStackBar />
       <TestimonialsSection />
       <KnowledgeAccordion />
-      <Footer />
-    </main>
+    </>
   );
 }

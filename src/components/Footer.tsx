@@ -4,20 +4,20 @@ import Artic9Logo from "./Artic9Logo";
 import { ARTIC9_INFO } from "@/data/artic9Data";
 
 const QUICK = [
-  { label: "Home", href: "#top" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Works", href: "#works" },
-  { label: "Contact", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Works", href: "/#works" },
+  { label: "Contact", href: "/contact" }
 ];
 
 const SERVICES = [
-  "Branding & Creative",
-  "Website Development",
-  "Mobile Apps",
-  "Social Media Marketing",
-  "SEO & PPC",
-  "Photo & Videography"
+  { label: "Branding & Creative", id: "branding" },
+  { label: "Website Development", id: "web-development" },
+  { label: "Mobile Apps", id: "mobile-apps" },
+  { label: "Social Media Marketing", id: "social-media" },
+  { label: "SEO & PPC", id: "seo" },
+  { label: "Photo & Videography", id: "photo-videography" }
 ];
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
           <h2>
             Let&apos;s Work <span>Together</span>
           </h2>
-          <a className="btn btn-yellow" href="#contact">
+          <a className="btn btn-yellow" href="/contact">
             Start a Project
             <span className="chip">
               <ArrowRight size={18} />
@@ -64,8 +64,8 @@ export default function Footer() {
             <h4>Services</h4>
             <ul>
               {SERVICES.map((s) => (
-                <li key={s}>
-                  <a href="#services">{s}</a>
+                <li key={s.id}>
+                  <a href={`/services#${s.id}`}>{s.label}</a>
                 </li>
               ))}
             </ul>

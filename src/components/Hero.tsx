@@ -30,7 +30,7 @@ export default function Hero() {
                 <ArrowRight size={18} />
               </span>
             </a>
-            <a className="btn btn-dark" href="#contact">
+            <a className="btn btn-dark" href="/contact">
               Request a Consultation
               <span className="chip">
                 <ArrowRight size={18} />

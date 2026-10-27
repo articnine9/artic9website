@@ -53,7 +53,7 @@ export default function AboutSection() {
               </li>
             ))}
           </ul>
-          <a className="btn btn-dark" href="#contact">
+          <a className="btn btn-dark" href="/about">
             View More
             <span className="chip">
               <ArrowRight size={18} />

@@ -96,7 +96,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     deliverables: ["Brand Identity Manual", "Vector Assets Package", "Stationery Kit", "Packaging Dielines"],
     icon: "Sparkles",
-    bgImage: "/images/hero-bg.jpg"
+    bgImage: "/images/portfolio/gt-holidays-branding.jpg"
   },
   {
     id: "web-development",
@@ -146,8 +146,7 @@ export const SERVICES: ServiceItem[] = [
       "End-to-End Store Deployment & Maintenance"
     ],
     deliverables: ["iOS & Android Production Builds", "Cloud API Architecture", "Admin Dashboard"],
-    icon: "Smartphone",
-    bgImage: "/images/portfolio/gt-holidays-branding.jpg"
+    icon: "Smartphone"
   },
   {
     id: "product-development",
@@ -163,8 +162,7 @@ export const SERVICES: ServiceItem[] = [
       "Enterprise Grade Security & Compliance"
     ],
     deliverables: ["Scalable Product MVP", "System Architecture Blueprint", "Automated CI/CD Pipeline"],
-    icon: "Layers",
-    bgImage: "/images/team-culture.jpg"
+    icon: "Layers"
   },
   {
     id: "seo",
@@ -180,8 +178,7 @@ export const SERVICES: ServiceItem[] = [
       "Weekly Rank Tracking & Actionable Reporting"
     ],
     deliverables: ["SEO Audit Report", "Keyword Roadmap", "On-Page Optimization", "Backlink Portfolio"],
-    icon: "TrendingUp",
-    bgImage: "/images/portfolio/gt-holidays-campaign.jpg"
+    icon: "TrendingUp"
   },
   {
     id: "ppc-advertising",
@@ -197,8 +194,7 @@ export const SERVICES: ServiceItem[] = [
       "Granular Multi-Touch Attribution & ROAS Tracking"
     ],
     deliverables: ["High-Converting Ad Campaigns", "Custom Landing Pages", "ROAS Dashboard"],
-    icon: "Target",
-    bgImage: "/images/portfolio/gt-holidays-branding.jpg"
+    icon: "Target"
   },
   {
     id: "photo-videography",

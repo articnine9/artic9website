@@ -1,16 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { ArrowRight, Check, Mail, Phone, MapPin } from "lucide-react";
 import { ARTIC9_INFO } from "@/data/artic9Data";
 
-const SERVICE_OPTIONS = ["Branding", "Website", "Mobile App", "Social Media", "SEO", "PPC Ads", "Photo & Video"];
+const SERVICE_OPTIONS = ["Branding", "Website", "Mobile App", "Product / SaaS", "Social Media", "SEO", "PPC Ads", "Photo & Video"];
+
+// Service ids from the Services page (?service=<id>) mapped to the form's chips
+const SERVICE_FROM_ID: Record<string, string> = {
+  branding: "Branding",
+  "web-development": "Website",
+  "mobile-apps": "Mobile App",
+  "product-development": "Product / SaaS",
+  "social-media": "Social Media",
+  seo: "SEO",
+  "ppc-advertising": "PPC Ads",
+  "photo-videography": "Photo & Video"
+};
 
 export default function ProjectInquiryForm() {
   const [services, setServices] = useState<string[]>(["Website"]);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("service");
+    const chip = id ? SERVICE_FROM_ID[id] : undefined;
+    if (chip) setServices([chip]);
+  }, []);
 
   const toggle = (s: string) =>
     setServices((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));

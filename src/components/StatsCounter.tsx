@@ -38,7 +38,7 @@ function CountUp({ value }: { value: string }) {
   );
 }
 
-export default function StatsCounter() {
+export default function StatsCounter({ showCta = true }: { showCta?: boolean }) {
   return (
     <section className="section section-dark">
       <div className="container">
@@ -54,12 +54,14 @@ export default function StatsCounter() {
               We are more than just a service provider — we are your partner in performance, helping businesses
               grow with the latest technology and effective marketing.
             </p>
-            <a className="btn btn-yellow" href="#about">
-              Know More
-              <span className="chip">
-                <ArrowRight size={18} />
-              </span>
-            </a>
+            {showCta && (
+              <a className="btn btn-yellow" href="/about">
+                Know More
+                <span className="chip">
+                  <ArrowRight size={18} />
+                </span>
+              </a>
+            )}
           </Reveal>
         </div>
 
