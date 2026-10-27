@@ -13,7 +13,7 @@ import { ARTIC9_INFO } from "@/data/artic9Data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Artic Nine Creative Agency was founded in 2019 in Nagercoil with a global vision. Meet the 25+ creative minds behind 1500+ projects for 250+ brands."
+    "Artic Nine Creative Agency was founded in 2017 in Nagercoil with a global vision. Meet the 33+ creative minds behind 2599+ projects for 299+ brands."
 };
 
 const INDUSTRIES = ["EdTech", "Retail", "Healthcare", "F&B", "Travel", "E-commerce"];

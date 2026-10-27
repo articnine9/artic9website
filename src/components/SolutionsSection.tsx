@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { ARTIC9_INFO } from "@/data/artic9Data";
 
 export default function SolutionsSection() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function SolutionsSection() {
             Smart Digital Solutions to <span className="hl">Elevate</span> Your Brand
           </h2>
           <p style={{ marginBottom: 28 }}>
-            Success starts with the right partner. Since 2019 we have helped businesses across Tamil Nadu, India and
+            Success starts with the right partner. Since {ARTIC9_INFO.founded} we have helped businesses across Tamil Nadu, India and
             beyond build strong online presences through strategic, results-driven marketing.
           </p>
           <a className="btn btn-yellow" href="#contact">
@@ -37,7 +38,7 @@ export default function SolutionsSection() {
             <h3>Why Businesses Choose Artic9</h3>
             <ul>
               <li>
-                <strong>{"07+"} years of experience</strong> and 1500+ projects launched for 250+ brands.
+                <strong>{ARTIC9_INFO.experienceYears} years of experience</strong> and {ARTIC9_INFO.projectsCompleted} projects launched for {ARTIC9_INFO.clientsCount} brands.
               </li>
               <li>
                 <strong>Creative + tech under one roof</strong> — designers, developers, film crew and marketers.

@@ -44,11 +44,11 @@ export interface Testimonial {
 export const ARTIC9_INFO = {
   name: "Artic Nine Creative Agency",
   shortName: "Artic9",
-  founded: "2019",
-  experienceYears: "07+",
-  projectsCompleted: "1500+",
-  clientsCount: "250+",
-  teamSize: "25+",
+  founded: "2017",
+  experienceYears: "09+",
+  projectsCompleted: "2599+",
+  clientsCount: "299+",
+  teamSize: "33+",
   tagline: "Helping your business grow by using the latest technology and effective marketing.",
   heroHeading: "We Help Brands Grow with Creative Power, High-Impact Tech & Results-Driven Marketing",
   heroSubheading: "From bespoke web and mobile applications to full-spectrum branding and ROI-obsessed digital campaigns, Artic9 empowers regional leaders and global challengers to scale fearlessly.",
@@ -336,10 +336,10 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const STATS = [
-  { value: "1500+", label: "Successfully Launched Projects", sub: "Delivered with precision & impact" },
-  { value: "250+", label: "Notable Brand Clients", sub: "From local titans to national leaders" },
-  { value: "07+", label: "Years of Experience", sub: "Founded in 2019, growing every day" },
-  { value: "25+", label: "In-House Technical Gurus", sub: "Designers, developers & strategists" }
+  { value: "2599+", label: "Successfully Launched Projects", sub: "Delivered with precision & impact" },
+  { value: "299+", label: "Notable Brand Clients", sub: "From local titans to national leaders" },
+  { value: "09+", label: "Years of Experience", sub: "Founded in 2017, growing every day" },
+  { value: "33+", label: "In-House Technical Gurus", sub: "Designers, developers & strategists" }
 ];
 
 export const TECH_STACK = [
@@ -358,7 +358,7 @@ export const TECH_STACK = [
 export const FAQ_ITEMS = [
   {
     question: "Why choose Artic9 over a traditional marketing agency?",
-    answer: "Artic9 brings together creative mastery and engineering rigor under one single roof. Founded in 2019, our in-house team of 25+ designers, developers, and media specialists eliminates clunky third-party handoffs. Whether you need a bespoke Next.js web application, a full brand overhaul, or an ROI-driven multi-city PPC ad campaign, we deliver thumping success with complete transparency."
+    answer: "Artic9 brings together creative mastery and engineering rigor under one single roof. Founded in 2017, our in-house team of 33+ designers, developers, and media specialists eliminates clunky third-party handoffs. Whether you need a bespoke Next.js web application, a full brand overhaul, or an ROI-driven multi-city PPC ad campaign, we deliver thumping success with complete transparency."
   },
   {
     question: "What makes Artic9’s bespoke website development different?",
